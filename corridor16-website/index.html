@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corridor:16 Graphics &amp; Signs, Burns Lake, BC | Signs. Print. Everything.</title>
+<meta name="description" content="Corridor:16 Graphics & Signs is Burns Lake's full-service print and sign shop: custom signs, banners, vehicle graphics, decals, laser engraving, trophies, apparel and business printing. Cheslatta owned and operated.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#0a1430;
+    --navy-900:#0f1d45;
+    --navy-800:#16265c;
+    --navy-700:#1f3378;
+    --indigo:#2c4295;
+    --ice:#bfe2f5;
+    --ice-soft:#e9f4fb;
+    --sky:#5aa7d6;
+    --sky-deep:#3d7fb5;
+    --paper:#ffffff;
+    --cloud:#f4f8fb;
+    --ink:#152038;
+    --ink-soft:#4a5670;
+    --radius:18px;
+    --shadow:0 18px 50px -18px rgba(15,29,69,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;}
+  img{max-width:100%;display:block;}
+  a{color:var(--sky-deep);text-decoration:none;}
+  h1,h2,h3,h4{font-family:'Outfit',sans-serif;line-height:1.12;color:var(--navy-900);}
+  .wrap{width:min(1180px,92vw);margin:0 auto;}
+  .eyebrow{display:inline-block;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-deep);background:var(--ice-soft);border:1px solid #d3e8f5;padding:.35rem .9rem;border-radius:999px;margin-bottom:1.1rem;}
+  .btn{display:inline-block;font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;padding:.85rem 1.7rem;border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;}
+  .btn-primary{background:var(--sky);color:var(--navy-950);box-shadow:0 10px 26px -10px rgba(90,167,214,.65);}
+  .btn-primary:hover{transform:translateY(-2px);background:#6fb5e0;}
+  .btn-ghost{border:2px solid rgba(255,255,255,.65);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+  .btn-navy{background:var(--navy-800);color:#fff;}
+  .btn-navy:hover{background:var(--navy-700);transform:translateY(-2px);}
+
+  /* ---------- NAV ---------- */
+  header{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .25s ease, box-shadow .25s ease;padding:.9rem 0;}
+  header.scrolled{background:rgba(10,20,48,.94);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(5,10,26,.35);padding:.55rem 0;}
+  .nav{display:flex;align-items:center;gap:1.2rem;}
+  .brand{display:flex;align-items:center;gap:.8rem;color:#fff;}
+  .brand img{width:74px;height:74px;object-fit:cover;border-radius:14px;background:#fff;padding:2px;}
+  .brand-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:.01em;line-height:1;}
+  .brand-sub{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ice);opacity:.9;}
+  .brand-tag{display:block;font-style:italic;font-size:.78rem;color:var(--ice);opacity:.95;margin-top:.2rem;}
+  nav.links{margin-left:auto;display:flex;align-items:center;gap:1.6rem;}
+  nav.links a{color:#eaf3fa;font-weight:500;font-size:.98rem;opacity:.92;}
+  nav.links a:hover{color:#fff;opacity:1;}
+  .nav-cta{margin-left:.4rem;}
+  .burger{margin-left:auto;display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;}
+  .burger span{display:block;height:3px;background:#fff;border-radius:2px;margin:8px 9px;transition:.25s;}
+  @media(max-width:940px){
+    nav.links{position:fixed;top:0;right:0;bottom:0;width:min(320px,84vw);background:var(--navy-950);flex-direction:column;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform .3s ease;box-shadow:-20px 0 60px rgba(0,0,0,.4);}
+    nav.links.open{transform:translateX(0);}
+    nav.links a{font-size:1.2rem;}
+    .burger{display:block;z-index:70;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--navy-950);}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,48,.55) 0%,rgba(10,20,48,.25) 45%,rgba(10,20,48,.92) 100%);}
+  .hero-inner{position:relative;z-index:2;padding:9rem 0 6rem;}
+  .hero h1{color:#fff;font-size:clamp(3rem,8.5vw,6.2rem);font-weight:900;letter-spacing:-.02em;}
+  .hero h1 .dot{color:var(--sky);}
+  .hero p.lede{color:var(--ice);font-size:clamp(1.05rem,2.1vw,1.35rem);max-width:620px;margin:1.4rem 0 2.2rem;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
+  .scroll-hint{position:absolute;left:50%;bottom:2.2rem;transform:translateX(-50%);z-index:2;color:var(--ice);font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;opacity:.8;animation:bob 2.4s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{background:var(--navy-900);color:var(--ice);overflow:hidden;padding:.85rem 0;border-top:1px solid rgba(191,226,245,.15);}
+  .marquee-track{display:flex;gap:3rem;white-space:nowrap;animation:slide 38s linear infinite;font-family:'Outfit',sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;}
+  .marquee-track span::before{content:"◆";color:var(--sky);margin-right:3rem;font-size:.7rem;vertical-align:2px;}
+  @keyframes slide{to{transform:translateX(-50%);}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:5.5rem 0;}
+  .section-head{max-width:720px;margin-bottom:3rem;}
+  .section-head h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.01em;}
+  .section-head p{color:var(--ink-soft);font-size:1.08rem;margin-top:.9rem;}
+
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;padding:3.2rem 0;}
+  .feature img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%;}
+  .feature h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem;}
+  .feature p{color:var(--ink-soft);margin-bottom:1.1rem;}
+  .feature ul{list-style:none;margin:0 0 1.6rem;}
+  .feature ul li{padding-left:1.6rem;position:relative;margin:.4rem 0;color:var(--ink);}
+  .feature ul li::before{content:"✓";position:absolute;left:0;color:var(--sky-deep);font-weight:700;}
+  .feature.flip .media{order:2;}
+  @media(max-width:840px){.feature{grid-template-columns:1fr;}.feature.flip .media{order:0;}}
+
+  /* services grid */
+  #services{background:linear-gradient(180deg,var(--cloud) 0%,#fff 100%);}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;}
+  @media(min-width:1101px){.svc-grid .svc:nth-child(9){grid-column:2;}.svc-grid .svc:nth-child(10){grid-column:3;}}
+  @media(max-width:1100px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+  .svc{background:#fff;border:1px solid #e3edf5;border-radius:var(--radius);padding:1.7rem 1.5rem;transition:transform .2s ease, box-shadow .2s ease;}
+  .svc:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .svc .ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-800),var(--sky-deep));display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:#fff;}
+  .svc h4{font-size:1.12rem;font-weight:700;margin-bottom:.45rem;}
+  .svc p{font-size:.93rem;color:var(--ink-soft);}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;}
+  .gal a{position:relative;border-radius:14px;overflow:hidden;display:block;aspect-ratio:4/3;box-shadow:0 8px 24px -12px rgba(15,29,69,.25);}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease;}
+  .gal a:hover img{transform:scale(1.06);}
+  .gal figcaption{position:absolute;inset:auto 0 0 0;padding:2.2rem .9rem .8rem;background:linear-gradient(180deg,transparent,rgba(10,20,48,.85));color:#fff;font-size:.88rem;font-weight:500;opacity:0;transition:opacity .25s;}
+  .gal a:hover figcaption{opacity:1;}
+  @media(hover:none){.gal figcaption{opacity:1;}}
+
+  /* cheslatta band */
+  .cheslatta{background:var(--navy-950);color:#fff;position:relative;overflow:hidden;}
+  .cheslatta::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(60% 90% at 85% 10%,rgba(90,167,214,.22),transparent 60%),
+    radial-gradient(50% 80% at 10% 90%,rgba(44,66,149,.5),transparent 65%);}
+  .cheslatta .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  .cheslatta h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin-bottom:1.1rem;}
+  .cheslatta p{color:var(--ice);margin-bottom:1rem;}
+  .cheslatta img{border-radius:var(--radius);box-shadow:0 24px 60px -20px rgba(0,0,0,.6);}
+  .cheslatta .eyebrow{background:rgba(191,226,245,.12);border-color:rgba(191,226,245,.35);color:var(--ice);}
+  @media(max-width:840px){.cheslatta .wrap{grid-template-columns:1fr;}}
+
+  /* paddle band */
+  .paddle{background:var(--ice-soft);}
+  .paddle .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  .paddle img{border-radius:var(--radius);box-shadow:var(--shadow);}
+  .paddle h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin-bottom:1rem;}
+  .paddle .tagline{font-family:'Outfit',sans-serif;font-weight:600;color:var(--sky-deep);font-size:1.15rem;margin-bottom:1rem;}
+  .paddle p{color:var(--ink-soft);margin-bottom:1rem;}
+  @media(max-width:840px){.paddle .wrap{grid-template-columns:1fr;}}
+
+  /* contact */
+  #contact{background:linear-gradient(180deg,#fff,var(--cloud));}
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.3rem;margin-top:1rem;}
+  .c-card{background:#fff;border:1px solid #e3edf5;border-radius:var(--radius);padding:1.7rem 1.5rem;}
+  .c-card h4{font-size:1rem;text-transform:uppercase;letter-spacing:.12em;color:var(--sky-deep);margin-bottom:.6rem;}
+  .c-card p{font-size:1.05rem;}
+  .c-card a{font-weight:600;}
+
+  /* footer */
+  footer{background:var(--navy-950);color:var(--ice);padding:3.5rem 0 2rem;}
+  .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;align-items:start;}
+  .foot h5{font-family:'Outfit',sans-serif;color:#fff;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem;}
+  .foot a{color:var(--ice);display:block;margin:.35rem 0;font-size:.95rem;}
+  .foot a:hover{color:#fff;}
+  .foot .brand{margin-bottom:1rem;}
+  .foot p{font-size:.92rem;opacity:.85;}
+  .legal{border-top:1px solid rgba(191,226,245,.18);margin-top:2.6rem;padding-top:1.4rem;font-size:.85rem;opacity:.75;text-align:center;}
+  @media(max-width:840px){.foot{grid-template-columns:1fr;}}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;background:rgba(8,14,32,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:4vh 4vw;cursor:zoom-out;}
+  .lb.open{display:flex;}
+  .lb img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 90px rgba(0,0,0,.6);}
+
+  /* contact section layout */
+  .contact-top{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;margin-bottom:3rem;}
+  .contact-top .section-head{margin-bottom:0;}
+  .contact-top img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;}
+  @media(max-width:840px){.contact-top{grid-template-columns:1fr;}}
+
+  /* contact modal */
+  .modal{position:fixed;inset:0;background:rgba(8,14,32,.75);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:110;padding:5vh 5vw;}
+  .modal.open{display:flex;}
+  .modal-card{background:#fff;border-radius:22px;max-width:520px;width:100%;padding:2.4rem 2.2rem;position:relative;box-shadow:0 40px 120px rgba(0,0,0,.5);max-height:90vh;overflow:auto;}
+  .modal-card h3{font-size:1.7rem;font-weight:800;margin-bottom:.4rem;}
+  .modal-card>p{color:var(--ink-soft);margin-bottom:1.4rem;}
+  .modal-close{position:absolute;top:.9rem;right:1.1rem;background:none;border:0;font-size:1.9rem;line-height:1;color:var(--ink-soft);cursor:pointer;}
+  .modal-close:hover{color:var(--ink);}
+  .m-row{display:flex;gap:.9rem;align-items:flex-start;padding:.75rem 0;border-top:1px solid #ecf2f8;}
+  .m-row .m-ico{width:40px;height:40px;flex:none;border-radius:11px;background:var(--ice-soft);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+  .m-row h5{font-family:'Outfit',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-deep);margin-bottom:.1rem;}
+  .m-row p{font-size:1rem;line-height:1.45;}
+  .m-row a{font-weight:600;}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/c16-logo.jpg" alt="Corridor:16 Graphics & Signs logo">
+      <span>
+        <span class="brand-name">Corridor<span style="color:var(--sky)">:16</span></span><br>
+        <span class="brand-sub">Graphics &amp; Signs</span>
+        <span class="brand-tag">A Proudly Indigenous Business</span>
+      </span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="links" id="navlinks">
+      <a href="#work">Our Work</a>
+      <a href="#services">Services</a>
+      <a href="#cheslatta">Who We Are</a>
+      <a href="https://www.chieflouiepaddle.ca/" target="_blank" rel="noopener">Chief Louie Paddle Co.</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary nav-cta open-contact" href="#contact">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <video autoplay muted loop playsinline poster="assets/sign-carrier-sekani.jpg">
+    <source src="assets/banner-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-inner">
+    <h1>signs<span class="dot">.</span><br>print<span class="dot">.</span><br>everything<span class="dot">.</span></h1>
+    <p class="lede">Custom signs, vehicle graphics, laser engraving, and full-service printing, all designed and built right here in Burns Lake on the Highway 16 corridor.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">See Our Work</a>
+      <a class="btn btn-ghost" href="#contact">Visit the Shop</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll ▾</div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Signs</span><span>Banners</span><span>Vehicle Graphics</span><span>Boat Lettering</span><span>Decals &amp; Stickers</span><span>Custom Magnets</span><span>Laser Engraving</span><span>Sublimation</span><span>Trophies &amp; Awards</span><span>Custom Apparel</span><span>Form Books</span><span>Business Cards</span><span>Graphic Design</span>
+    <span>Signs</span><span>Banners</span><span>Vehicle Graphics</span><span>Boat Lettering</span><span>Decals &amp; Stickers</span><span>Custom Magnets</span><span>Laser Engraving</span><span>Sublimation</span><span>Trophies &amp; Awards</span><span>Custom Apparel</span><span>Form Books</span><span>Business Cards</span><span>Graphic Design</span>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Make</span>
+      <h2>From the highway to the hockey rink, our work is everywhere you look.</h2>
+      <p>Carrying on a 33-year tradition of sign-making and printing in the Lakes District, now with new equipment, new energy, and community ownership.</p>
+    </div>
+
+    <div class="feature reveal">
+      <div class="media"><img src="assets/sign-carrier-sekani.jpg" alt="Aluminum panel sign for Carrier Sekani Family Services" loading="lazy"></div>
+      <div>
+        <h3>Signs &amp; Banners</h3>
+        <p>Storefront signs, site and safety signage, real-estate signs, rink boards, event banners and more. Most of it is printed and built right in our shop on aluminum, coroplast, banner vinyl and metal, with specialty materials sourced from trusted suppliers.</p>
+        <ul>
+          <li>Indoor &amp; outdoor signs, any size</li>
+          <li>Grommeted vinyl &amp; mesh banners</li>
+          <li>Road-style signs and custom driveway signs</li>
+          <li>Arena rink boards &amp; sponsor panels</li>
+        </ul>
+        <a class="btn btn-navy" href="#gallery">Browse the gallery</a>
+      </div>
+    </div>
+
+    <div class="feature flip reveal">
+      <div class="media"><img src="assets/truck-blair-wilson.jpg" alt="Metallic vinyl door lettering on a Blair Wilson Contracting truck" loading="lazy"></div>
+      <div>
+        <h3>Vehicle, Boat &amp; Fleet Graphics</h3>
+        <p>Your rig is a rolling billboard. We cut and install vinyl lettering and printed decals for work trucks, fleets, vans, boats, sleds and heavy equipment, built to survive northern winters and forestry roads.</p>
+        <ul>
+          <li>Door lettering &amp; phone numbers</li>
+          <li>Full-colour printed logos &amp; window decals</li>
+          <li>Boat names &amp; registration numbers</li>
+          <li>Reflective &amp; metallic vinyl options</li>
+        </ul>
+        <a class="btn btn-navy open-contact" href="#contact">Get your truck lettered</a>
+      </div>
+    </div>
+
+    <div class="feature reveal">
+      <div class="media"><img src="assets/trophies-fastball.jpg" alt="Engraved trophies for the Memorial Fastball Classic" loading="lazy"></div>
+      <div>
+        <h3>Laser Engraving, Trophies &amp; Awards</h3>
+        <p>Our laser engraver puts your message on wood, metal, glass and more. From tournament trophy packages to retirement plaques and one-of-a-kind keepsakes, we engrave it all right here in the shop.</p>
+        <ul>
+          <li>Trophies, medals &amp; plaques</li>
+          <li>Engraved gifts &amp; memorial pieces</li>
+          <li>Corporate recognition awards</li>
+          <li>Industrial tags &amp; nameplates</li>
+          <li>Full-colour sublimated metal plates and plaques</li>
+        </ul>
+        <a class="btn btn-navy open-contact" href="#contact">Plan your awards night</a>
+      </div>
+    </div>
+
+    <div class="feature flip reveal">
+      <div class="media"><img src="assets/apparel-hoodie.jpg" alt="Custom vinyl-printed hoodie" loading="lazy"></div>
+      <div>
+        <h3>Apparel, Decals &amp; Custom Print</h3>
+        <p>Team hoodies, event tees, holographic stickers and window clings, plus the paper products this shop has been known for over three decades: invoice books, work order books, and carbonless copy forms for local businesses.</p>
+        <ul>
+          <li>Custom shirts, hoodies &amp; workwear</li>
+          <li>Stickers &amp; die-cut decals, any finish</li>
+          <li>Custom magnets, eco magnets &amp; sublimated metal magnets</li>
+          <li>Invoice, work-order &amp; inspection form books</li>
+          <li>Business cards, brochures &amp; flyers</li>
+        </ul>
+        <a class="btn btn-navy open-contact" href="#contact">Start an order</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Your Everything Team</span>
+      <h2>One local shop.<br>Every service under one roof.</h2>
+      <p>Design and production happen right here at 374 Highway 16. We make most of what we sell in our own shop and order in specialty items when a job calls for them. That means fast turnarounds, fair prices, and money that stays in the Lakes District.</p>
+      <p style="margin-top:.7rem">Most of our projects can be customized. Bring us your idea and our team will help you refine it and get it made.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ico">🪧</div><h4>Signs &amp; Site Signage</h4><p>Aluminum, coroplast and metal signs for storefronts, job sites, farms and highways.</p></div>
+      <div class="svc reveal"><div class="ico">🎌</div><h4>Banners &amp; Displays</h4><p>Full-colour vinyl banners with grommets for events, teams, fairs and grand openings.</p></div>
+      <div class="svc reveal"><div class="ico">🚚</div><h4>Vehicle &amp; Boat Graphics</h4><p>Lettering, logos and decals for trucks, fleets, boats and heavy equipment.</p></div>
+      <div class="svc reveal"><div class="ico">✨</div><h4>Decals, Stickers &amp; Magnets</h4><p>Die-cut, printed, reflective and holographic vinyl, plus custom magnets, eco magnets and sublimated metal magnets.</p></div>
+      <div class="svc reveal"><div class="ico">📚</div><h4>Business Print &amp; Form Books</h4><p>Invoice books, work orders, daily time reports, vehicle inspection books and carbonless forms.</p></div>
+      <div class="svc reveal"><div class="ico">🔥</div><h4>Laser Engraving</h4><p>Precision engraving on wood, metal and glass: signs, tags, gifts and keepsakes.</p></div>
+      <div class="svc reveal"><div class="ico">🏆</div><h4>Trophies &amp; Awards</h4><p>Full trophy packages, plaques and medals for tournaments, schools and workplaces.</p></div>
+      <div class="svc reveal"><div class="ico">👕</div><h4>Custom Apparel</h4><p>Vinyl-pressed shirts, hoodies and workwear for crews, teams and events.</p></div>
+      <div class="svc reveal"><div class="ico">🎨</div><h4>Graphic Design</h4><p>In-house design help. Bring us an idea, a logo, or a napkin sketch and we'll make it real.</p></div>
+      <div class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8c-3.4.3-7.6 1.5-10.1 4C7.6 10.3 6.5 13.6 6.3 16c2.4-.2 5.7-1.3 8.2-3.8 2.5-2.5 3.7-6.7 4-10.1z"/><path d="M3.5 20.5c2-2 4-4.2 7-6.5"/><path d="M9.5 13.5l3 .5M12.5 10.5l3 .5"/></svg></div><h4>Indigenous-Language Printing</h4><p>Signage, labels, stickers and other printed materials produced in Indigenous languages.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Recent Work</span>
+      <h2>Made in Burns Lake. Spotted everywhere.</h2>
+      <p>A few favourites from the shop floor. Click any photo for a closer look.</p>
+    </div>
+    <div class="gal reveal">
+      <a href="assets/sign-flash-tattoo.jpg"><img src="assets/sign-flash-tattoo.jpg" alt="Flash Tattoo Works printed sign" loading="lazy"><figcaption>Full-colour shop sign</figcaption></a>
+      <a href="assets/truck-cheslatta.jpg"><img src="assets/truck-cheslatta.jpg" alt="Cheslatta Carrier Nation truck lettering" loading="lazy"><figcaption>Fleet lettering for Cheslatta Carrier Nation</figcaption></a>
+      <a href="assets/banner-skin-tyee.jpg"><img src="assets/banner-skin-tyee.jpg" alt="Skin Tyee First Nation banner" loading="lazy"><figcaption>Grommeted event banner</figcaption></a>
+      <a href="assets/rink-boards.jpg"><img src="assets/rink-boards.jpg" alt="Sponsor boards at the Burns Lake arena" loading="lazy"><figcaption>Arena rink boards</figcaption></a>
+      <a href="assets/decal-salmon.jpg"><img src="assets/decal-salmon.jpg" alt="Holographic salmon vinyl decals" loading="lazy"><figcaption>Holographic cut vinyl</figcaption></a>
+      <a href="assets/sign-danskin.jpg"><img src="assets/sign-danskin.jpg" alt="Etched metal Danskin Garage sign" loading="lazy"><figcaption>Metal shop sign</figcaption></a>
+      <a href="assets/wallart-windows.jpg"><img src="assets/wallart-windows.jpg" alt="Printed window-frame wall art" loading="lazy"><figcaption>Photo wall art</figcaption></a>
+      <a href="assets/boat-lettering.jpg"><img src="assets/boat-lettering.jpg" alt="Just Wright boat name lettering" loading="lazy"><figcaption>Boat lettering</figcaption></a>
+      <a href="assets/sign-ursa-minor.jpg"><img src="assets/sign-ursa-minor.jpg" alt="Ursa Minor Brewing BC Ale Trail signs" loading="lazy"><figcaption>BC Ale Trail signage</figcaption></a>
+      <a href="assets/plaque-drax.jpg"><img src="assets/plaque-drax.jpg" alt="Engraved corporate plaque" loading="lazy"><figcaption>Engraved plaque</figcaption></a>
+      <a href="assets/banner-playful-flame.jpg"><img src="assets/banner-playful-flame.jpg" alt="Playful Flame Glassworks banner" loading="lazy"><figcaption>Market-booth banner</figcaption></a>
+      <a href="assets/decals-ldm-reflective.jpg"><img src="assets/decals-ldm-reflective.jpg" alt="Reflective LDM decals glowing in the dark" loading="lazy"><figcaption>Reflective fleet decals</figcaption></a>
+    </div>
+  </div>
+</section>
+
+<!-- CHESLATTA -->
+<section class="cheslatta" id="cheslatta">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Who We Are</span>
+      <h2>Cheslatta Owned &amp; Operated.</h2>
+      <p>Corridor:16 Graphics &amp; Signs is proudly owned by the Cheslatta Development Corporation, the economic arm of the Cheslatta Carrier Nation. That makes us a 100% Indigenous-owned business rooted in the Lakes District.</p>
+      <p>When the shop changed hands, the community stepped up to keep essential printing and sign services in Burns Lake, create local jobs, and build something that lasts. Every order supports that work.</p>
+      <p>We also produce signage, labels, stickers and other printed materials in Indigenous languages. Ask us about language projects for your community, school or organization.</p>
+      <p>The drowned trees in our logo rise from the flooded shores of Cheslatta territory. They remind us of where we come from, and why we build things meant to endure.</p>
+      <a class="btn btn-primary" href="https://www.cheslatta.com/" target="_blank" rel="noopener" style="margin-top:.8rem">Learn about the Cheslatta Carrier Nation</a>
+    </div>
+    <div class="reveal">
+      <img src="assets/truck-cheslatta.jpg" alt="Cheslatta Carrier Nation lettering on a black work truck" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- CHIEF LOUIE PADDLE CO -->
+<section class="paddle" id="paddle">
+  <div class="wrap">
+    <div class="reveal">
+      <img src="assets/engraving-lighthouse.jpg" alt="Laser-engraved wood card made in our shop" loading="lazy">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Our Sister Company</span>
+      <h2>Chief Louie Paddle Company</h2>
+      <p class="tagline">Rooted in Culture. Handcrafted with Purpose. Made to be Remembered.</p>
+      <p>Sharing our shop and our laser engraver, Chief Louie Paddle Company revives the Cheslatta tradition of engraved wooden paddles, handcrafted from wood reclaimed on the shores of Ootsa Lake and named in honour of Chief Louie B. Louie.</p>
+      <p>Custom-engraved paddles, miniatures and wood keepsakes make for unforgettable gifts, retirement presentations and cultural pieces.</p>
+      <a class="btn btn-navy" href="https://www.chieflouiepaddle.ca/" target="_blank" rel="noopener">Visit chieflouiepaddle.ca</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-top">
+      <div class="section-head reveal">
+        <span class="eyebrow">Say Hello</span>
+        <h2>Drop by the shop.<br>We're right downtown.</h2>
+        <p>Bring your idea, your logo, or the tailgate that needs lettering. We'll take it from there.</p>
+      </div>
+      <div class="reveal">
+        <img src="assets/storefront.jpg" alt="The Corridor:16 Graphics & Signs shop on Highway 16 in Burns Lake" loading="lazy">
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal"><h4>Visit</h4><p>374 Highway 16<br>Burns Lake, BC&nbsp;&nbsp;V0J 1E0</p><p style="margin-top:.5rem"><a href="https://maps.app.goo.gl/JpEFSFXfb24d4ZBg9" target="_blank" rel="noopener">Get directions →</a></p></div>
+      <div class="c-card reveal"><h4>Hours</h4><p>Monday to Friday<br>10&nbsp;am – 6&nbsp;pm</p></div>
+      <div class="c-card reveal"><h4>Contact</h4><p><a href="tel:+12506927887">250-692-7887</a></p><p><a href="mailto:sales@corridor16.ca">sales@corridor16.ca</a></p></div>
+      <div class="c-card reveal"><h4>Follow</h4><p><a href="https://www.facebook.com/Corridor16" target="_blank" rel="noopener">Facebook</a></p><p><a href="https://www.linkedin.com/company/corridor-16-graphics-signs/" target="_blank" rel="noopener">LinkedIn</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top">
+          <img src="assets/c16-logo.jpg" alt="Corridor:16 logo">
+          <span>
+            <span class="brand-name" style="color:#fff">Corridor<span style="color:var(--sky)">:16</span></span><br>
+            <span class="brand-sub">Graphics &amp; Signs</span>
+            <span class="brand-tag">A Proudly Indigenous Business</span>
+          </span>
+        </a>
+        <p>Burns Lake's full-service sign and print shop. Cheslatta owned and operated, serving the Lakes District and the Highway 16 corridor.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="#work">Our Work</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h5>Family of Companies</h5>
+        <a href="https://www.cheslatta.com/" target="_blank" rel="noopener">Cheslatta Carrier Nation</a>
+        <a href="https://www.chieflouiepaddle.ca/" target="_blank" rel="noopener">Chief Louie Paddle Company</a>
+        <a href="https://cheslattacontracting.ca/" target="_blank" rel="noopener">Cheslatta Contracting</a>
+        <img src="assets/cheslatta-badge.png" alt="Cheslatta Owned and Operated badge" loading="lazy" style="width:110px;margin-top:1.1rem;border-radius:50%">
+      </div>
+    </div>
+    <div class="legal">© <span id="yr"></span> Corridor:16 Graphics &amp; Signs · 374 Highway 16, Burns Lake, BC · An Indigenous business, owned and operated by the Cheslatta Development Corporation</div>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox"><img id="lbimg" src="" alt="Enlarged work photo"></div>
+
+<!-- CONTACT POPUP -->
+<div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+  <div class="modal-card">
+    <button class="modal-close" id="cm-close" aria-label="Close">&times;</button>
+    <h3 id="cm-title">Let's talk about your project.</h3>
+    <p>Call, email, or drop by the shop and we'll get you a quote.</p>
+    <div class="m-row"><div class="m-ico">📞</div><div><h5>Call</h5><p><a href="tel:+12506927887">250-692-7887</a></p></div></div>
+    <div class="m-row"><div class="m-ico">✉️</div><div><h5>Email</h5><p><a href="mailto:sales@corridor16.ca">sales@corridor16.ca</a></p></div></div>
+    <div class="m-row"><div class="m-ico">📍</div><div><h5>Visit</h5><p>374 Highway 16, Burns Lake, BC&nbsp;&nbsp;V0J 1E0<br><a href="https://maps.app.goo.gl/JpEFSFXfb24d4ZBg9" target="_blank" rel="noopener">Get directions →</a></p></div></div>
+    <div class="m-row"><div class="m-ico">🕙</div><div><h5>Hours</h5><p>Monday to Friday, 10&nbsp;am – 6&nbsp;pm</p></div></div>
+  </div>
+</div>
+
+<script>
+  // sticky nav
+  const bar=document.getElementById('topbar');
+  addEventListener('scroll',()=>bar.classList.toggle('scrolled',scrollY>40),{passive:true});
+  // mobile nav
+  const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  burger.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // lightbox
+  const lb=document.getElementById('lightbox'),lbimg=document.getElementById('lbimg');
+  document.querySelectorAll('.gal a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lbimg.src=a.getAttribute('href');lb.classList.add('open');}));
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+  // contact popup
+  const cm=document.getElementById('contact-modal');
+  document.querySelectorAll('.open-contact').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();cm.classList.add('open');}));
+  document.getElementById('cm-close').addEventListener('click',()=>cm.classList.remove('open'));
+  cm.addEventListener('click',e=>{if(e.target===cm)cm.classList.remove('open');});
+  addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');cm.classList.remove('open');}});
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
